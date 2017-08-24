@@ -1,0 +1,67 @@
+package Examen;
+
+//Nombre de la clase
+
+import java.util.Scanner;
+
+
+
+public class Triangulo {
+    
+    int Lado1;
+    int Lado2;
+    int Lado3;
+
+    
+                //Metoditos
+                    public void inicializar (Triangulo Equilatero){
+                        System.out.println("Introdusca el Lado 1");
+                        Scanner Lector = new Scanner(System.in);
+                        Lado1 = Lector.nextInt();
+                        
+                        System.out.println("Introdusca el Lado 2");
+                        Lado2 = Lector.nextInt();
+                        
+                        System.out.println("Introdusca el Lado 3");
+                        Lado3 = Lector.nextInt(); 
+                    }
+                    
+                    public void ladomayor (Triangulo Equilatero) {
+                        if(Lado1>Lado2 && Lado1>Lado3  ){
+                            System.out.println("El lado mayor es: " + Lado1);
+                        }if(Lado2>Lado1 && Lado2>Lado3 ){
+                            System.out.println("El lado mayor es: " + Lado2);
+                        }if(Lado3>Lado1 && Lado3>Lado2 ){
+                            System.out.println("El lado mayor es: " + Lado3);
+                        }
+                    }
+                    
+                    public void Equilatero(Triangulo Equilatero){
+                        if((Lado1 == Lado2) && (Lado2 == Lado3) && (Lado3 == Lado1)){
+                            System.out.println("El Triangulo es Equilatero");
+                            
+                        }else{
+                            System.out.println("El Triangulo no es Equilatero");
+                        }
+                    }
+    
+    
+    
+
+    
+     public static void main(String[] args){
+         Triangulo Equilatero = new Triangulo();
+         
+         for(int a=0;a>4;a++){
+             System.out.println("Respuesta");
+         }
+         
+         
+         
+         //llamando
+         
+         Equilatero.inicializar(Equilatero);
+         Equilatero.ladomayor(Equilatero);
+         Equilatero.Equilatero(Equilatero);
+     }
+}
